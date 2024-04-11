@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+       
+
+        <title>Arts and Crafts</title>
+
+        <style>
+
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            *{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+
+            .header{
+                position: relative;
+                text-align: center;
+                color: white;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .header img{
+                filter:brightness(40%)
+            }
+
+            .centered {
+                font-size: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .container p {
+                font-size: 23px;
+                text-align: justify;
+                padding-top: 80px;
+            }
+
+            .details summary{
+                padding-bottom: 10px;
+            }
+
+            .container h3 {
+                padding-top: 80px;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav id="navbar"></nav>
+        <div class="header">
+            <img src="Header.jpg" alt="header" style="width:100%; height: 200px">
+            <div class="centered">Arts and Crafts</div>
+        </div>
+
+        <div class="container">
+            <p>Malaysia boasts a rich and diverse arts and crafts scene, influenced by its multicultural heritage and vibrant traditions. Here are some notable arts and crafts in Malaysia:</p>
+
+            <details>
+                <summary>Textile Arts</summary>
+                <ul>
+                    <li>Batik: A traditional fabric art form involving wax-resist dyeing techniques, often featuring intricate patterns and motifs.</li>
+                    <li>Songket: Handwoven fabric embellished with metallic threads, commonly used in traditional Malay attire for special occasions.</li>
+                </ul>
+            </details>
+
+            <details>
+                <summary>Woodcraft</summary>
+                <ul>
+                    <li>Woodcarving: Intricate carvings on wood, depicting various motifs such as animals, plants, and cultural symbols.</li>
+                    <li>Wau-making: The art of crafting traditional Malaysian kites, known for their vibrant colors and intricate designs.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Basketry and Weaving</summary>
+                <ul>
+                    <li>Rattan Weaving: Craftsmanship involving the weaving of rattan strips to create furniture, baskets, mats, and decorative items.</li>
+                    <li>Pandan Weaving: Artisans weave pandan leaves into various products, including bags, mats, and traditional handicrafts.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Pottery and Ceramics</summary>
+                <ul>
+                    <li>Traditional Pottery: Handcrafted pottery items, including vessels, utensils, and decorative pieces, made using techniques passed down through generations.</li>
+                    <li>Contemporary Ceramics: Modern ceramic art, ranging from functional tableware to sculptural pieces, created by local artisans and artists.</li>
+                </ul>
+            </details>
+
+            <h3>
+                Let's look into the details of arts and crafts in Malaysia!
+            </h3>
+
+            <ul>
+                <li><a href="Peranakan Chinese.html">Peranakan Chinese</a></li>
+                <li><a href="Melayu.html">Melayu</a></li>
+            </ul>
+
+        </div>
+
+        <footer id="footer"></footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(function () {
+            $("#navbar").load("navbar.html");
+          });
+        </script>
+        <script>
+            $(function () {
+              $("#footer").load("footer.html");
+            });
+        </script>
+          
+    </body>
+    
+</html>
+

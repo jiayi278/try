@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Explore Malaysia: Top 3 Must Try Indian Cuisines in Malaysia</title>
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="styles-for-cuisine.css">
+</head>
+
+<body>
+    <nav id="navbar"></nav>
+    <h1 style="text-decoration: underline overline;">Top 3 Must Try Indian Cuisines in Malaysia</h1>
+    <table width="100%">
+        <tr>
+            <td width="5%">
+                <a href="#" onclick="change('prev')">
+                    <img class="arrow" src="left-arrow.png" alt="Left Arrow" title="Prev">
+                </a>
+            </td>
+
+            <td width="90%">
+                <img class="cuisine" id="cuisine" src="indianfood0.jpg" alt="Indian Curry" title="Indian Curry">
+            </td>
+            <td width="5%">
+                <a href="#" onclick="change('next')">
+                    <img class="arrow" src="right-arrow.png" alt="Right Arrow" title="Next">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td width="5%">
+            </td>
+
+            <td width="90%">
+                <div>
+                    <h1 id="cuisinetitle">1. Indian Curry</h1>
+                    <p id="cuisinedesc">
+                        Indian curry in Malaysia embodies a harmonious blend of Indian spices and Malaysian culinary
+                        influences, reflecting the nation's diverse cultural tapestry. From rich and creamy chicken
+                        tikka masala to fiery fish curry, Malaysian Indian cuisine offers a myriad of curry dishes, each
+                        boasting its unique blend of aromatic spices and flavors. Often enjoyed with fluffy rice or
+                        freshly baked naan bread, Indian curry dishes are a staple in Malaysian households and eateries
+                        alike. Whether indulging in a hearty plate of butter chicken or savoring the tangy flavors of
+                        vegetable korma, Malaysian Indian curry dishes delight palates with their rich textures and
+                        vibrant tastes, showcasing the culinary heritage and multicultural essence of the country.
+                    </p>
+                </div>
+            </td>
+            <td width="5%">
+            </td>
+        </tr>
+    </table>
+
+    <div class="buttonnn">
+        <a href="malayfood.html">
+            <button class="prevnnext">
+                << Top 3 Local Malay Cuisine</button></a>
+        <a href="cuisine.html">
+            <button class="back">Return to Cuisine Page</button></a>
+        <a href="chinesefood.html">
+            <button class="prevnnext">Top 3 Local Chinese Cuisine >></button></a>
+    </div>
+    <footer id="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <script>
+        var count = 0;
+        function change(direction) {
+            if (direction == "prev") {
+                if (count == 0)
+                    count = 2;
+                else
+                    count--;
+            }
+            else
+                count++;
+
+            if (count == 1) {
+                document.getElementById("cuisine").src = "indianfood1.JPG";
+                document.getElementById("cuisine").alt = "Thosai";
+                document.getElementById("cuisine").title = "Thosai";
+                document.getElementById("cuisinetitle").innerHTML = "2. Thosai";
+                document.getElementById("cuisinedesc").innerHTML = "Thosai, or dosa, is a popular South Indian crepe enjoyed in Malaysia. Made from a fermented batter of rice and lentils, it's cooked until crispy and served with coconut chutney, sambar, and spicy dipping sauce. Loved for its versatility and nutritional benefits, it's a cherished part of Malaysia's diverse culinary scene.";
+            }
+            else if (count == 2) {
+                document.getElementById("cuisine").src = "indianfood2.JPG";
+                document.getElementById("cuisine").alt = "Nasi Biryani";
+                document.getElementById("cuisine").title = "Nasi Biryani";
+                document.getElementById("cuisinetitle").innerHTML = "3. Nasi Biryani";
+                document.getElementById("cuisinedesc").innerHTML = "Nasi Biryani is a fragrant rice dish popular in Malaysia, cooked with aromatic spices and often served with meat or vegetables. It's a favorite choice for special occasions and gatherings, cherished for its rich flavors and satisfying aroma.";
+            }
+            else {
+                count = 0;
+                document.getElementById("cuisine").src = "indianfood0.JPG";
+                document.getElementById("cuisine").alt = "Indian Curry";
+                document.getElementById("cuisine").title = "Indian Curry";
+                document.getElementById("cuisinetitle").innerHTML = "1. Indian Curry";
+                document.getElementById("cuisinedesc").innerHTML = "Indian curry in Malaysia embodies a harmonious blend of Indian spices and Malaysian culinary influences, reflecting the nation's diverse cultural tapestry. From rich and creamy chicken tikka masala to fiery fish curry, Malaysian Indian cuisine offers a myriad of curry dishes, each boasting its unique blend of aromatic spices and flavors. Often enjoyed with fluffy rice or freshly baked naan bread, Indian curry dishes are a staple in Malaysian households and eateries alike. Whether indulging in a hearty plate of butter chicken or savoring the tangy flavors of vegetable korma, Malaysian Indian curry dishes delight palates with their rich textures and vibrant tastes, showcasing the culinary heritage and multicultural essence of the country.";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

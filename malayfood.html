@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <title>Explore Malaysia: Top 3 Must Try Malay Dishes in Malaysia</title>
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link rel="stylesheet" href="styles-for-cuisine.css">
+</head>
+
+<body>
+    <nav id="navbar"></nav>
+    <h1 style="text-decoration: underline overline;">Top 3 Must Try Malay Dishes in Malaysia</h1>
+    <table width="100%">
+        <tr>
+            <td width="5%">
+                <a href="#" onclick="change('prev')">
+                    <img class="arrow" src="left-arrow.png" alt="Left Arrow" title="Prev">
+                </a>
+            </td>
+
+            <td width="90%">
+                <img class="cuisine" id="cuisine" src="malayfood0.jpg" alt="Nasi lemak" title="Nasi lemak">
+            </td>
+            <td width="5%">
+                <a href="#" onclick="change('next')">
+                    <img class="arrow" src="right-arrow.png" alt="Right Arrow" title="Next">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td width="5%">
+            </td>
+
+            <td width="90%">
+                <div>
+                    <h1 id="cuisinetitle">1. Nasi Lemak</h1>
+                    <p id="cuisinedesc">
+                        Nasi Lemak is a beloved Malaysian dish, featuring fragrant rice cooked in coconut milk and
+                        pandan leaves, served with a variety of accompaniments such as crispy fried anchovies, roasted
+                        peanuts, cucumber slices, hard-boiled or fried egg, and spicy sambal sauce. This iconic dish
+                        represents a harmonious blend of flavors and textures, epitomizing the richness and diversity of
+                        Malaysian cuisine.
+                    </p>
+                </div>
+            </td>
+            <td width="5%">
+            </td>
+        </tr>
+    </table>
+
+    <div class="buttonnn">
+        <a href="chinesefood.html">
+            <button class="prevnnext"><< Top 3 Local Chinese Cuisine</button></a>
+        <a href="cuisine.html">
+            <button class="back">Return to Cuisine Page</button></a>
+        <a href="indianfood.html">
+            <button class="prevnnext">Top 3 Local Indian Cuisine >></button></a>
+    </div>
+    <footer id="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#footer").load("footer.html");
+        });
+    </script>
+    <script>
+        var count = 0;
+        function change(direction) {
+            if (direction == "prev")
+            {
+                if (count == 0)
+                    count = 2;
+                else
+                    count--;
+            }
+            else
+                count++;
+
+            if (count == 1) {
+                document.getElementById("cuisine").src = "malayfood1.JPG";
+                document.getElementById("cuisine").alt = "Nasi Kerabu";
+                document.getElementById("cuisine").title = "Nasi Kerabu";
+                document.getElementById("cuisinetitle").innerHTML = "2. Nasi Kerabu";
+                document.getElementById("cuisinedesc").innerHTML = "Nasi Kerabu is a traditional Malay dish originating from the northeastern states of Malaysia, characterized by its vibrant blue rice, which is colored using the petals of the butterfly pea flower. The rice is typically served with an assortment of fresh herbs and vegetables, such as shredded coconut, bean sprouts, long beans, and cucumber, as well as various proteins like fried fish, grilled chicken, or beef rendang. Additionally, Nasi Kerabu is often accompanied by a tangy and spicy sambal sauce, creating a flavorful and visually striking culinary experience.";
+            }
+            else if (count == 2) {
+                document.getElementById("cuisine").src = "malayfood2.JPG";
+                document.getElementById("cuisine").alt = "Lemang";
+                document.getElementById("cuisine").title = "Lemang";
+                document.getElementById("cuisinetitle").innerHTML = "3. Lemang";
+                document.getElementById("cuisinedesc").innerHTML = "Lemang is a classic Malaysian dish often enjoyed during festive occasions like Hari Raya Aidilfitri. Lemang is made by cooking glutinous rice with coconut milk in hollowed bamboo tubes over an open flame, resulting in a fragrant and slightly smoky flavor. It is typically served with rendang, a rich and flavorful meat dish made with slow-cooked beef or chicken simmered in coconut milk and a blend of aromatic spices until tender. The combination of tender rendang and smoky lemang creates a delightful harmony of flavors and textures, making it a beloved dish in Malaysian cuisine.";
+            }
+            else {
+                count = 0;
+                document.getElementById("cuisine").src = "malayfood0.JPG";
+                document.getElementById("cuisine").alt = "Nasi Lemak";
+                document.getElementById("cuisine").title = "Nasi Lemak";
+                document.getElementById("cuisinetitle").innerHTML = "1. Nasi Lemak";
+                document.getElementById("cuisinedesc").innerHTML = "Nasi Lemak is a beloved Malaysian dish, featuring fragrant rice cooked in coconut milk and pandan leaves, served with a variety of accompaniments such as crispy fried anchovies, roasted peanuts, cucumber slices, hard-boiled or fried egg, and spicy sambal sauce. This iconic dish represents a harmonious blend of flavors and textures, epitomizing the richness and diversity of Malaysian cuisine.";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Malaysia - Indian Music and Dance Cultures</title>
+  <link rel="stylesheet" href="home.css" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    .header {
+      background-image: url('indian-header.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 200px 0;
+      text-align: center;
+    }
+
+    .content {
+      padding: 50px 0;
+    }
+
+    .py-5 p {
+      font-size: 20px;
+    }
+
+    .highlight-row {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .instrument-img,
+    .dance-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .instrument-img:hover,
+    .dance-img:hover {
+      transform: scale(1.05);
+      border-color: rgb(255, 0, 170);
+    }
+
+    .instrument-box:hover .instrument-info,
+    .dance-box:hover .dance-info {
+      display: block;
+    }
+
+    .instrument-box,
+    .dance-box {
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .info-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      padding: 60px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      max-width: 80%;
+      width: 100%;
+      height: 90%;
+      font-size: 1.2em;
+      backdrop-filter: blur(10px);
+      overflow-y: auto;
+    }
+
+    .info-popup h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .info-popup p .info-popup article {
+      font-size: 1.2em;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .close-icon {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .close-icon::before,
+    .close-icon::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #555;
+      top: 50%;
+      left: 0%;
+      transform-origin: center;
+    }
+
+    .close-icon::before {
+      transform: rotate(45deg);
+    }
+
+    .close-icon::after {
+      transform: rotate(-45deg);
+    }
+
+    .close-btn:hover .close-icon::before,
+    .close-btn:hover .close-icon::after {
+      background-color: #ff0000;
+    }
+
+    #videoContainer video {
+      display: block;
+      margin: 0 auto;
+      max-width: 50%;
+      height: auto;
+      padding: 20px;
+    }
+
+    #imageContainer img {
+      display: block;
+      max-width: 50%;
+      height: auto;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    #articleContainer,
+    #audioContainer {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 80px 0;
+      }
+
+      .content {
+        padding: 20px 0;
+      }
+
+      .instrument-box,
+      .dance-box {
+        padding: 5px;
+      }
+
+      .info-popup {
+        padding: 20px;
+      }
+
+      .close-btn {
+        top: 5px;
+        right: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navbar"></nav>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1 class="display-4">Indian Music and Dance Cultures</h1>
+    </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <h2>Introduction</h2>
+      <p>Indian music and dance are more than mere art forms; they are living embodiments of a rich and diverse cultural
+        legacy. From the soulful strains of classical ragas to the exuberant beats of folk dances, each note and gesture
+        carries the essence of India's myriad landscapes, languages, and traditions.
+        Embark on a journey through the vibrant tapestry of India's cultural heritage, where every beat and step
+        resonates with centuries of tradition and innovation. </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <div class="container">
+    <h2>Musical Instruments</h2>
+    <div class="row highlight-row">
+      <div class="col-lg-3 mb-4 instrument-box">
+        <img src="tabla.png" alt="Tabla" class="instrument-img" onclick="showInfoPopup('<br>Tabla',
+                   'The tabla is a popular percussion instrument originating from India. It consists of a pair of hand drums, typically made of wood, metal, or clay, and covered with stretched animal skin. The larger drum, known as the dayan or tabla produces higher-pitched sounds, while the smaller drum called the bayan or duggi produces deeper tones.',
+                   '','playing-Tabla.mp4',
+                   'Playing Tabla involves intricate finger movements and techniques to produce a wide range of sounds, from sharp, percussive notes to resonant tones. The player uses the fingers and palms of both hands to strike the drums, with each finger producing a distinct sound. Additionally, the tabla player may use the heel of the hand, the wrist, or even the fingertips to create various articulations and embellishments.  It plays a central role in traditional Indian music ensembles, accompanying vocalists, instrumentalists, and dancers. It is also featured prominently in solo performances, where tabla players showcase their virtuosity and improvisational skills.',
+                   '')">
+        <h3>Tabla</h3>
+      </div>
+      <div class="col-lg-3 mb-4 instrument-box">
+        <img src="harmonium.png" alt="Harmonium" class="instrument-img" onclick="showInfoPopup('<br>Harmonium',
+                'The harmonium is a popular keyboard instrument that originated in Europe during the 19th century and became widely used in Indian classical music, particularly in the Hindustani classical tradition. It is portable instrument with a keyboard and a set of bellows that generate sound through air pressure.',
+                'playing-Harmonium.png','',
+                'The harmonium produces sound when air is forced through metal reeds by pumping the bellows with one hand while playing the keys with the other hand. It has a distinct and rich timbre, characterized by its warm, sustained tones and the ability to create dynamic swells and fades through the manipulation of the bellows. In Indian classical music, the harmonium serves as both a solo and accompanying instrument. It is often used to provide harmonic support to vocalists and instrumentalists, adding depth and richness to performances. Its versatility allows it to accompany a wide range of musical genres, including bhajans (devotional songs), ghazals, thumris, and folk music.<br><br>Melodies of Harmonium:',
+                'Harmonium.mp3')">
+        <h3>Harmonium</h3>
+      </div>
+      <div class="col-lg-3 mb-4 instrument-box">
+        <img src="flute.png" alt="Flute" class="instrument-img" onclick="showInfoPopup('<br>Flute',
+                'The Indian flute, known as bansuri is typically made from bamboo or other natural materials. It is cylindrical in shape, with finger holes along its length and a blowing hole at one end. ',
+                'playing-Flute.png','',
+                'Flute performances by Indian musicians are featured in concerts, recitals, and cultural events across Malaysia. They are often invited to perform at prestigious venues, music festivals, and community gatherings, where their soul-stirring music resonates with audiences of all ages and backgrounds.<br><br>Melodies of Flute:',
+                'Seruling.mp3')">
+        <h3>Flute</h3>
+      </div>
+      <div class="col-lg-3 mb-4 instrument-box">
+        <img src="sitar.png" alt="Sitar" class="instrument-img" onclick="showInfoPopup('<br>Sitar',
+              'Sitar is a plucked string instrument popularized by Hindustani classical music. From the mid-20th century on, the sitar influenced worldwide rock, jazz, and pop music. In addition to sitars now being seen in multiple musical genres, many string instruments are tuned to imitate the sitar.',
+              'playing-Sitar.png','',
+              'Sitar is made up of seasoned toon wood or teak. It is often referred to as the prince of Indian instruments, has made its mark in Malaysia as a symbol of rich cultural heritage and musical traditions for Indians. The Sitar instrument is typically 1.2 meters, or four feet, in length and is played sitting down with the instrument held at a 45-degree angle. The sitar is a plucked string instrument with a long neck, resonating gourd body, and movable frets. The resonator(s) are made from gourd—either pumpkin, calabash, or a wood replica. Bridge styles and materials vary depending on the preference of the musician or instrument maker. The same is true of the tabli, or soundboard. Altering the bridge to affect the quality of sound is called jawari, and is often achieved by filing down the bridge to a specific curve.<br><br>Sound of Sitar:',
+              'Sitar.mp3')">
+        <h3>Sitar</h3>
+      </div>
+    </div>
+
+    <h2 class="mt-5">Dance</h2>
+    <div class="row highlight-row">
+      <div class="col-lg-3 mb-4 dance-box">
+        <img src="bharatanatyam.png" alt="Bharatanatyam" class="dance-img" onclick="showInfoPopup('<br>Bharatanatyam',
+                'Bharatanatyam is one of the oldest classical dances from India. This dance started off in the temples of Tamil Nadu and slowly spread across South India and eventually made its way to Malaysia.',
+                '',
+                'Bharatanatyam.mp4',
+                'The word Bharatanatyam describes the dance. Natyam means dance in Sanskrit. Bharata is a mnemonic:<br><br>Bha - derived from the word Bhava means emotions and feelings<br><br>Ra - derived from the word Raaga means melody<br><br>Ta - derived from the word Tala means rhythm<br><br>The dancers wear traditional costume with jewellery and make up. Men wear pleated dhothis covering the lower portion of the body while a few pieces of jewellery cover the upper portion. Women wear tailor-made sari with specially stitched in pleats and jewellery. It is essential for all dancers to wear ankle bells as it help them keep a proper rhythm of their leg movements with the “Tala” sounds.',
+                '')">
+        <h3>Bharatanatyam</h3>
+      </div>
+      <div class="col-lg-3 mb-4 dance-box">
+        <img src="bhangra.png" alt="Bhangra" class="dance-img" onclick="showInfoPopup('Bhangra',
+                'Bhangra, a lively and energetic folk dance form originating from the Punjab region of India.  It was introduced in Malaysia by the Sikhs who accompanied the British in the early 20th century.',
+                'bhangra2.png',
+                '',
+                'The traditional bhangra dance is performed in a mix of singing accompanied by music and the beat of the dhol (drum). Other instruments like tumbi, tabla and dhad are also commonly used but the dhol is essential for this dance. The dancers wear colourful and bright attire which captures the audiences attention to the dance moves. Men usually wear kurta with lungi and turban while woman wear salwar kameez and duppatas. Bhangra dance is performed during cultural celebrations, festivals, and events in Malaysia, including Indian weddings, harvest festivals (such as Vaisakhi), and cultural showcases. It is also performed at community gatherings, social events, and cultural performances, bringing people together in celebration and camaraderie.',
+                '')">
+        <h3>Bhangra</h3>
+      </div>
+      <div class="col-lg-3 mb-4 dance-box">
+        <img src="kathak.png" alt="Kathak" class="dance-img" onclick="showInfoPopup('<br>Kathak',
+                  'Kathak is a classical dance originating from northern India and developed under the influence of both Hindu and Muslim cultures.',
+                  'kathak2.png',
+                  '',
+                  'Kathak is characterized by intricate footwork, expressive gestures, and precise rhythmic patterns that the dancer articulates by controlling about 100 ankle bells. Dancers often wear elaborate costumes, adorned with traditional jewelry and embellishments. Kathak performances typically include solo, duet, and group compositions, showcasing a blend of technical skill, artistic expression, and storytelling process.',
+                  '')">
+        <h3>Kathak</h3>
+      </div>
+      <div class="col-lg-3 mb-4 dance-box">
+        <img src="odissi.png" alt="Odissi" class="dance-img" onclick="showInfoPopup('<br>Odissi',
+              'Odissi is traditionally a dance-drama genre of performance art, where the artist(s) and musicians play out a story, a spiritual message or devotional poem from the Hindu texts. It is one of the ancient dance forms that originated in the temples of Odisha.',
+              '',
+              'Odissi.mp4',
+              'Odissi dance is marked with graceful postures, emotive facial expressions, bright costumes, and makeup. The dancer uses intricate hand gestures to convey emotions, depict various characters, and tell stories. The versatile footwork complimenting the rhythm and music adds to the fluidity and expressiveness of the dance form. Odissi is performed by women who presented stories in the form of dance - dramas in praise of Lord Vishnu.',
+              '')">
+        <h3>Odissi</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Information Popup -->
+  <div class="info-popup" id="infoPopup">
+    <h3 id="popupTitle"></h3>
+    <p id="popupDescription"></p>
+
+    <div id="imageContainer"></div>
+    <div id="videoContainer"></div>
+    <div id="articleContainer"></div>
+    <div id="audioContainer"></div>
+    <button class="close-btn" onclick="hideInfoPopup()"><span class="close-icon"></span></button>
+  </div>
+  <footer id="footer"></footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(function () {
+          $("#navbar").load("navbar.html");
+      });
+  </script>
+
+  <script>
+      $(function () {
+          $("#footer").load("footer.html");
+      });
+  </script>
+  <script>
+
+    function showInfoPopup(title, description, imageSrc, videoSrc, articleContent, audioSrc) {
+      document.getElementById("popupTitle").innerHTML = title.replace(/\n/g, '<br>') + '<hr>';;
+      document.getElementById("popupDescription").innerHTML = description;
+      document.getElementById("imageContainer").innerHTML = "";
+      document.getElementById("videoContainer").innerHTML = "";
+      document.getElementById("articleContainer").innerHTML = "";
+      document.getElementById("audioContainer").innerHTML = "";
+
+      if (imageSrc) {
+        var imageElement = document.createElement("img");
+        imageElement.controls = true;
+        imageElement.src = imageSrc;
+        document.getElementById("imageContainer").appendChild(imageElement);
+      }
+
+      if (videoSrc) {
+        var videoElement = document.createElement("video");
+        videoElement.controls = true;
+        videoElement.src = videoSrc;
+        document.getElementById("videoContainer").appendChild(videoElement);
+      }
+
+      if (articleContent) {
+        var articleElement = document.createElement("article");
+        articleElement.innerHTML = articleContent;
+        document.getElementById("articleContainer").appendChild(articleElement);
+      }
+
+      if (audioSrc) {
+        var audioElement = document.createElement("audio");
+        audioElement.controls = true;
+        audioElement.src = audioSrc;
+        document.getElementById("audioContainer").appendChild(audioElement);
+      }
+
+      document.getElementById("infoPopup").style.display = "block";
+    }
+
+    function hideInfoPopup() {
+      var videoElement = document.getElementById("videoElement");
+      if (videoElement) {
+        videoElement.currentTime = 0;
+        videoElement.pause();
+      }
+      document.getElementById("infoPopup").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

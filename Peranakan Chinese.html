@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        
+
+        <title>Arts and Crafts</title>
+
+        <style>
+
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            *{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+
+            .header{
+                position: relative;
+                text-align: center;
+                color: white;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .header img{
+                filter:brightness(40%);
+                width: 100%;
+                height: 200px;
+            }
+
+            .centered {
+                font-size: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .history-header {
+                padding: 80px 0 40px; 
+                text-align: center;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .history-info p {
+                font-size: 18px;
+                text-align: justify;
+                line-height: 1.8;
+                position:relative;
+            }
+
+            .history-info p b{
+                text-transform: uppercase;
+                font-size: 25px;
+                line-height: normal;
+            }
+
+            .kebaya {padding: 80px 0 40px; font-family: "Times New Roman", Times, serif;}
+            .kebaya-content {padding-top: 100px;}
+            
+            .kebaya-history h3 {
+                font-size:18px;
+                color: #3c4258;
+                text-transform: initial;
+                line-height: 1.8;
+                text-align: justify;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #999fb3;
+            }
+            .kebaya-add-content h4 {
+                color: #636a82;
+                font-size: 16px;
+                padding-top: 10px;
+                font-family: "Times New Roman", Times, serif;
+            }
+            .kebaya-add-content p {
+                font-size: 16px;
+                color: #999fb3;
+                text-align: justify;
+            }
+
+            .kebaya-img{position: relative;}
+            
+            .kebaya-img video {
+                max-width: 600px;
+                height: 300px;
+            }
+            
+
+            .shoes-header {
+                padding: 30px 0 50px; 
+                text-align: center;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .shoes-info img {
+                float: left;
+                width: 33.33%;
+                padding: 5px;
+                max-width: 100%;
+            }
+
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .shoes-info p {
+                text-align: justify;
+                line-height: 1.8;
+                padding-bottom: 40px;
+            }
+
+            .footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px 0;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <nav id="navbar"></nav>
+        <div class="header">
+            <img src="Header.jpg" alt="header">
+            <div class="centered">Peranakan Chinese</div>
+        </div>
+
+        <!-- History -->
+        <section id="history" class="history">
+            <div class="history-header">
+                <h2>History</h2>
+            </div>
+
+            <div class="container">
+                <div class="history-info">
+                        <p><b>Peranakan Chinese</b> community in Malaysia also known as "Baba Nyonya". The term "Baba" traditionally refers to Peranakan Chinese men, while "Nyonya" refers to Peranakan Chinese women. Together, they represent a unique cultural group in Malaysia with a blend of Chinese and Malay influences. The Baba Nyonya community is known for its distinctive cuisine, language (Baba Malay or Baba Chinese), traditional attire such as the kebaya, and elaborate customs and rituals. They have contributed significantly to Malaysia's multicultural heritage and are celebrated for their rich cultural traditions.</p>
+                </div>
+            </div>
+            
+
+        </section>
+
+        <!-- Nyonya Kebaya -->
+        <section id="kebaya" class="kebaya">
+
+			<div class="section-heading text-center">
+				<h2>Nyonya Kebaya</h2>
+			</div>
+
+			<div class="container">
+				<div class="kebaya-content">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="kebaya-history">
+								<h3>
+									The Nyonya kebaya is a traditional blouse worn by Peranakan women, particularly in Malaysia, Singapore, and parts of Indonesia. It is an iconic symbol of Peranakan culture and is often worn on special occasions, such as weddings, festivals, and cultural events.
+								</h3>
+
+                                <div class="kebaya-add-content">
+                                    <h4>Design</h4>
+                                    <br>
+                                    <p>The kebaya typically consists of a fitted, figure-flattering blouse with a front opening, often fastened with a series of buttons or brooches. It is usually made from lightweight, sheer fabrics such as cotton or silk, which are cool and comfortable in the tropical climate of Southeast Asia. The neckline of the kebaya is a distinctive feature, often shaped into a delicate curve or adorned with lace or embroidery.</p>
+                                </div>
+								
+							</div>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5">
+							<div class="kebaya-img">
+								<video id="kebaya" width="600" controls >
+                                    <source src="Kebaya.mp4" type="video/mp4">
+                                </video>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!-- Embroidery Beaded Shoes -->
+        <section id="shoes" class="shoes">
+            <div class="shoes-header">
+                <h2>Handcrafted Nyonya Beaded Shoes</h2>
+            </div>
+            <div class="container">
+                <div class="shoes-info">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="shoes3.jpg" alt="Shoes3" style="width: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="shoes1.jpg" alt="Shoes1" style="width: 100%">
+                        </div>
+                        <div class="col-4">
+                            <img src="shoes2.jpg" alt="Shoes2" style="width: 100%">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Nyonya embroidery shoes, also known as "kasut manek" or "beaded slippers," are a traditional footwear item worn by Nyonyas, the women of the Peranakan community in Malaysia, Singapore, and Indonesia. These shoes are renowned for their exquisite craftsmanship and intricate beadwork, making them a distinctive element of Peranakan fashion. The defining feature of Nyonya embroidery shoes is the elaborate beadwork that adorns the surface of the shoes. Tiny glass beads, often imported from Europe, are hand-stitched onto the fabric in intricate patterns and designs. These beads come in a variety of colors, allowing for vibrant and eye-catching combinations.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script>
+          $(function () {
+            $("#navbar").load("navbar.html");
+          });
+        </script>
+    
+            <script>
+                $(function () {
+                  $("#footer").load("footer.html");
+                });
+            </script>
+        <footer id="footer"></footer>
+        
+    </body>
+</html>

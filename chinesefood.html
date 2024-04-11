@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <title>Explore Malaysia: Top 3 Must Try Chinese Food in Malaysia</title>
+    <link rel="stylesheet" href="styles-for-cuisine.css">
+</head>
+
+<body>
+    <nav id="navbar"></nav>
+
+    <h1 style="text-decoration: underline overline;">Top 3 Must Try Chinese Food in Malaysia</h1>
+    <table width="100%">
+        <tr>
+            <td width="5%">
+                <a href="#" onclick="change('prev')">
+                    <img class="arrow" src="left-arrow.png" alt="Left Arrow" title="Prev">
+                </a>
+            </td>
+
+            <td width="90%">
+                <img class="cuisine" id="cuisine" src="chinesefood0.jpg" alt="Penang Char-Kuey-Teow"
+                    title="Penang Char-Kuey-Teow">
+            </td>
+            <td width="5%">
+                <a href="#" onclick="change('next')">
+                    <img class="arrow" src="right-arrow.png" alt="Right Arrow" title="Next">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td width="5%">
+            </td>
+
+            <td width="90%">
+                <div>
+                    <h1 id="cuisinetitle">1. Penang Char-Kuey-Teow</h1>
+                    <p id="cuisinedesc">
+                        Penang Char Kuey Teow is a signature Malaysian dish originating from Penang, renowned for its
+                        savory stir-fried flat rice noodles cooked over high heat with prawns, cockles, Chinese lap
+                        cheong sausage, eggs, bean sprouts, and chives, seasoned with soy sauce and chili paste,
+                        creating a tantalizing blend of flavors and textures emblematic of the region's culinary
+                        prowess.
+                    </p>
+                </div>
+            </td>
+            <td width="5%">
+            </td>
+        </tr>
+    </table>
+
+    <div class="buttonnn">
+        <a href="indianfood.html">
+            <button class="prevnnext">
+                << Top 3 Local Indian Cuisine</button></a>
+        <a href="cuisine.html">
+            <button class="back">Return to Cuisine Page</button></a>
+        <a href="malayfood.html">
+            <button class="prevnnext">Top 3 Local Malay Cuisine >></button></a>
+    </div>
+    <footer id="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
+    </script>        
+    <script>
+            $(function () {
+              $("#footer").load("footer.html");
+            });
+        </script>
+    <script>
+        var count = 0;
+        function change(direction) {
+            if (direction == "prev")//left arrow clicked
+            {
+                if (count == 0)// check if is FOOD 1, avoiding negative number
+                    count = 2; //go to FOOD 3
+                else
+                    count--;//go to prev food
+            }
+            else
+                count++;//go to next food
+            if (count == 1) {
+                document.getElementById("cuisine").src = "chinesefood1.JPG";
+                document.getElementById("cuisine").alt = "Ipoh Prawn Mee";
+                document.getElementById("cuisine").title = "Ipoh Prawn Mee";
+                document.getElementById("cuisinetitle").innerHTML = "2. Ipoh Prawn Mee";
+                document.getElementById("cuisinedesc").innerHTML = "Ipoh Prawn Mee is a popular Malaysian noodle dish originating from Ipoh, known for its rich and flavorful broth made from prawn shells and pork bones, served with springy noodles, succulent prawns, slices of tender pork, bean sprouts, boiled egg, and a dash of chili paste, offering a harmonious blend of savory and spicy flavors that captivate the taste buds.";
+            }
+            else if (count == 2) {
+                document.getElementById("cuisine").src = "chinesefood2.JPG";
+                document.getElementById("cuisine").alt = "Klang Bak-Kut-teh";
+                document.getElementById("cuisine").title = "Klang Bak-Kut-teh";
+                document.getElementById("cuisinetitle").innerHTML = "3. Klang Bak-Kut-teh";
+                document.getElementById("cuisinedesc").innerHTML = "Klang Bak Kut Teh is a renowned Malaysian dish hailing from Klang, featuring tender pork ribs simmered in a fragrant herbal broth infused with a blend of Chinese herbs and spices, served alongside steamed rice or youtiao (Chinese fried dough), providing a comforting and nourishing culinary experience emblematic of the region's culinary heritage.";
+            }
+            else {//prevent number out of range, number beyond 2 comes back to 0
+                count = 0;
+                document.getElementById("cuisine").src = "chinesefood0.JPG";
+                document.getElementById("cuisine").alt = "Penang Char-Kuey-Teow";
+                document.getElementById("cuisine").title = "Penang Char-Kuey-Teow";
+                document.getElementById("cuisinetitle").innerHTML = "1. Penang Char-Kuey-Teow";
+                document.getElementById("cuisinedesc").innerHTML = "Penang Char Kuey Teow is a signature Malaysian dish originating from Penang, renowned for its savory stir-fried flat rice noodles cooked over high heat with prawns, cockles, Chinese lap cheong sausage, eggs, bean sprouts, and chives, seasoned with soy sauce and chili paste, creating a tantalizing blend of flavors and textures emblematic of the region's culinary prowess.";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

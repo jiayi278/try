@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home.css" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <title>Arts and Crafts</title>
+
+        <style>
+             *{
+                padding: 0;
+                margin: 0;
+            }
+
+            *{
+                -webkit-box-sizing:border-box;
+                -moz-box-sizing:border-box;
+                -o-box-sizing:border-box;
+                -ms-box-sizing:border-box;
+                box-sizing:border-box;
+            }
+
+            .header{
+                position: relative;
+                text-align: center;
+                color: white;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .header img{
+                filter:brightness(40%);
+                width: 100%;
+                height: 200px;
+            }
+
+            .centered {
+                font-size: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .batik h1, 
+            .rattanWeaving h1 {
+                padding-top: 80px;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .batik-info p,
+            .rattan-info p,
+            .wau-info p {
+                text-align: justify;
+                font-size: 17px;
+                padding-right: 30px;
+            }
+
+            .batik-info img {
+                height: 400px;
+                width:500px;
+                padding-left: 30px;
+            }
+            
+            .rattan-info img {
+                height: 350px;
+                width: 550px;
+            }
+            
+            .wau h1 {
+                padding: 80px 0 40px;
+                font-family: "Times New Roman", Times, serif;
+            }
+
+            .wau-info video {
+                max-width: 600px;
+                height: 300px;
+            }
+
+            .wau-info.button-list{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 550px;
+                height: 90px;
+            }
+            
+            .button-list button {
+                cursor: pointer;
+                color: #1f2c6c;
+                display: inline-block;
+                border: 2px solid;
+                margin-left: 20px;
+                border-radius: 15px;
+                line-height: 28px;
+                text-align: center;
+                padding: 8px;
+                margin-left: 10px;
+            }
+
+            .footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px 0;
+            }
+
+        </style>
+    </head>
+    <body>    
+        <nav id="navbar"></nav>
+        <div class="header">
+            <img src="Header.jpg" alt="header">
+            <div class="centered">Melayu</div>
+        </div>
+
+        <!-- Batik -->
+        <section id="batik" class="batik">
+            <div class="container">
+                <h1>Batik</h1>
+                <br><br>
+                <div class="batik-info">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Batik holds significant cultural and historical importance in Malaysia, where it is celebrated as a traditional art form and a symbol of national identity. Batik has a long history in Malaysia, with evidence of its practice dating back several centuries. The art of batik making was traditionally passed down through generations, with skilled artisans using wax-resist dyeing techniques to create intricate patterns on fabric. Traditional Malaysian batik is created using a manual wax-resist dyeing process. Hot wax is applied to the fabric using a tool called a "tjanting" or by hand, forming intricate designs and patterns. The fabric is then dyed, and the wax is removed to reveal the colorful pattern underneath. Different regions of Malaysia may have their own distinctive styles and motifs in batik making. For example, the East Coast states of Kelantan and Terengganu are famous for their vibrant and colorful batik with floral and geometric patterns. The state of Pahang is known for its "batik tekap," which features bold motifs inspired by nature and traditional symbols. In the west coast states like Penang and Perak, batik motifs may have a more subtle and refined aesthetic. </p>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-6">
+                            <img src="batik.jpg" alt="Batik">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rattan Weaving -->
+        <section id="rattanWeaving" class="rattanWeaving">
+            <div class="container">
+                <h1>Rattan Weaving</h1>
+                <br><br>
+                <div class="rattan-info">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Rattan weaving is a traditional craft that has been practiced by various indigenous communities in Malaysia for centuries. Rattan, a type of climbing palm found in tropical forests, is known for its strength, flexibility, and durability, making it an ideal material for weaving. Rattan weaving involves the skillful manipulation of rattan strips to create a wide range of products, including furniture, baskets, mats, hats, and decorative items. Artisans employ various weaving techniques, such as plaiting, coiling, twining, and looping, to produce intricate and sturdy designs. Rattan weaving holds cultural significance in Malaysia, where it is used to create everyday objects as well as ceremonial and ritual items. Rattan products are often adorned with decorative motifs and patterns that reflect the cultural identity and traditions of different indigenous communities.</p>
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1">
+                            <img src="rattan.jpg" alt="RattanWeaving" width="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wau -->
+        <section id="wau" class="wau">
+            <div class="container">
+                <h1>Wau Bulan</h1>
+
+                <div class="wau-info">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>"Wau Bulan" is a traditional Malaysian kite that holds cultural significance in the country, particularly in the state of Kelantan. The name "Wau Bulan" translates to "moon kite" in Malay, derived from its distinctive crescent moon shape. The most striking feature of Wau Bulan is its crescent-shaped design, resembling the shape of a crescent moon. The frame of the kite is typically made from lightweight bamboo or rattan strips, while the body is covered with colorful fabric, often adorned with intricate patterns and designs inspired by nature, traditional motifs, or Islamic art.  Wau Bulan holds symbolic significance in Malaysian culture, representing the beauty and grace of the moon. In addition to its aesthetic appeal, the kite is also associated with cultural identity, community pride, and traditional craftsmanship. Wau Bulan is prominently featured in various cultural events, festivals, and competitions throughout Malaysia, particularly in Kelantan and Terengganu. These events showcase the artistry and skill of kite makers and flyers, who demonstrate their abilities in kite-making, kite-flying techniques, and acrobatics.</p>
+                        </div>
+                        <div class="col-sm-offset-1 col-sm-5" >
+                            <video id="wau-bulan" width="600">
+                                <source src="
+                                Wau Bulan.mp4" type="video/mp4">
+                            </video>
+                            <br><br>
+                            <div class="button-list">
+                                <button onclick="TogglePlay()">Play/Pause</button>
+                                <button onclick="toggleMute()">Mute/Unmute</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script>
+          $(function () {
+            $("#navbar").load("navbar.html");
+          });
+        </script>
+    
+            <script>
+                $(function () {
+                  $("#footer").load("footer.html");
+                });
+            </script>
+        <script> 
+            var myVideo = document.getElementById("wau-bulan"); 
+            
+            function TogglePlay() {
+                if(myVideo.paused){
+                    myVideo.play();
+                }
+                else myVideo.pause();
+            } 
+            
+            function toggleMute() {
+                var video = document.getElementById("wau-bulan");
+                if (video.muted) {
+                    // Unmute the video
+                    video.muted = false;
+                } else {
+                    // Mute the video
+                    video.muted = true;
+                }
+            }
+        </script>
+    </body>
+</html>

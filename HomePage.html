@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Malaysia Culture & Festival</title>
+  <link rel="stylesheet" href="home.css" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Dongle' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
+
+  <style>
+    #main {
+      background-color: aliceblue;
+    }
+
+    .imgethnic {
+      width: 40%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .welMessage,
+    #main {
+      text-align: center;
+      font-size: 24px;
+      font-family: Cambria, Cochin;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .desc {
+      padding-top: 15px;
+    }
+
+    .ethnics {
+      font-weight: bold;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav id="navbar"></nav>
+  <img src="https://ling-app.com/wp-content/uploads/2022/03/1.png" alt="" width="100%">
+
+  <div class="welMessage">
+    <hr>
+    <h1><strong>Malaysia, A Country with Cultural Diversity!</strong></h1>
+
+    <p style="font-size: 24px;">Malaysia is a nation celebrated for its rich tapestry of cultural diversity, where
+      various ethnicities,
+      traditions, and customs intertwine harmoniously. Situated in Southeast Asia, Malaysia boasts a unique blend of
+      Malay, Chinese, Indian, and indigenous cultures, making it a melting pot of vibrant traditions and practices. This
+      cultural mosaic is deeply rooted in the country's history, shaped by centuries of migration, trade, and
+      intercultural exchange.
+    </p>
+    <hr>
+  </div>
+
+  <div id="main">
+
+    <h1 style="font-weight: bolder;">Let's know about our Main Ethnic Groups</h1>
+
+    <div class="races">
+      <h2 class="ethnics">Malay</h2>
+      <img class="imgethnic"
+        src="https://english.kupasonline.com/wp-content/uploads/2023/01/D8B027BB-396D-4CEB-AEC1-38F7CD42AFCA.jpeg"
+        alt="Malays">
+      <p class="desc">As the largest ethnic group, Malays are indigenous to Malaysia and predominantly practice Islam.
+        They are known for their warm hospitality, traditional arts such as batik and silat, and rich culinary heritage
+        featuring dishes like nasi lemak and rendang.</p><br>
+    </div>
+    <div class="races">
+      <h2 class="ethnics">Chinese</h2>
+      <img class="imgethnic"
+        src="https://media.freemalaysiatoday.com/wp-content/uploads/2022/08/Chinese-New-Year-CNY-Freepik.jpg"
+        alt="Chinese">
+      <p class="desc">Chinese Malaysians form a significant portion of the population and have a strong influence on the
+        country's economy and culture. Predominantly Buddhist or Taoist, they celebrate cultural festivals like Chinese
+        New Year and Mooncake Festival, and their contributions to Malaysian cuisine and arts are evident throughout the
+        nation.</p><br>
+    </div>
+
+    <div class="races">
+      <h2 class="ethnics">Indian</h2>
+      <img class="imgethnic" src="https://images.bewakoof.com/image/content/2023/04/18111456/image-104.png"
+        alt="Indians">
+      <p class="desc"> Indian Malaysians, comprising various subgroups such as Tamils, Telugus, and Punjabis, enrich
+        Malaysia's cultural landscape with their Hindu traditions, colorful festivals like Deepavali and Thaipusam, and
+        mouthwatering dishes like roti canai and banana leaf rice.</p><br>
+    </div>
+
+    <div class="races">
+      <h2 class="ethnics">Indigenous People</h2>
+      <img class="imgethnic"
+        src="https://indigenouspeoplenet.wordpress.com/wp-content/uploads/2022/04/shutterstock_668955559.webp?w=1440&h=807&crop=1"
+        alt="Indigenous Peoples">
+      <p class="desc"> Malaysia is also home to numerous indigenous groups, including the Orang Asli of Peninsular
+        Malaysia and various tribes in Sabah and Sarawak, such as the Iban, Kadazan-Dusun, and Bidayuh. These
+        communities maintain their ancestral customs, languages, and cultural practices, contributing to the nation's
+        cultural diversity.</p><br>
+    </div>
+  </div>
+
+  <footer id="footer"></footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $("#navbar").load("navbar.html");
+    });
+  </script>
+  <script>
+    $(function () {
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <script>
+    if (document.cookie.indexOf("visited=true") !== -1) { //if -1 indicates that the cookies is not found
+      console.log("Welcome back!");
+      alert("Welcome back!");
+    } else {
+      console.log("Welcome!");
+      alert("Welcome to Explore Malaysia!\nWe will introduce you about our interesting cultural diversity in this article.");
+      document.cookie = "visited=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+    }
+  </script>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music and Dance Cultures</title>
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .header {
+            background-image: url('musicdance.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 200px 0;
+            text-align: center;
+        }
+
+        .header img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            color: white;
+        }
+
+        .py-5 p {
+            font-size: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .category {
+            width: 48%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-box {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .category-box:hover {
+            transform: translateY(-5px);
+            background-color: lightgoldenrodyellow;
+            text-decoration: none;
+        }
+
+        .category-box img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .category-box h4 {
+            text-align: center;
+            color: #333;
+        }
+
+
+        .info {
+            width: 48%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h2,
+        .info h2 {
+            color: #333;
+        }
+
+        .category ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .category ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 80px 0;
+            }
+
+            .content {
+                padding: 20px 0;
+            }
+
+            .instrument-box,
+            .dance-box {
+                padding: 5px;
+            }
+
+            .info-popup {
+                padding: 20px;
+            }
+
+            .close-btn {
+                top: 5px;
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar"></nav>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="display-4">Music and Dance Cultures in Malaysia</h1>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2>Introduction</h2>
+            <p>In Malaysia, music and dance play a significant role in reflecting the rich cultural heritage and
+                diversity of the country.
+                Both art forms are deeply rooted in the traditions, beliefs, and customs of various ethnic groups that
+                make up Malaysian society,
+                including Malay, Chinese, Indian, and indigenous communities. Yet, amid this diversity, there is a
+                common thread of unity—a shared
+                appreciation for the beauty of cultural expression and the power of artistic harmony to transcend
+                boundaries. </p>
+        </div>
+    </section>
+
+    <!-- Music and Dance Categories Section -->
+    <div class="row justify-content-center">
+        <div class="col-md-2">
+            <div class="category-box">
+                <a href="malay.html">
+                    <img src="malay.png" alt="Malay Music and Dance">
+                    <h4>Malay</h4>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="category-box">
+                <a href="indian.html">
+                    <img src="indian.png" alt="Indian Music and Dance">
+                    <h4>Indian</h4>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="category-box">
+                <a href="chinese.html">
+                    <img src="chinese.png" alt="Chinese Music and Dance">
+                    <h4>Chinese</h4>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="category-box">
+                <a href="others.html">
+                    <img src="others.png" alt="Other Music and Dance">
+                    <h4>Others</h4>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("navbar.html");
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+
+</html>

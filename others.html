@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysia - Others Music and Dance Cultures</title>
+    <link rel="stylesheet" href="home.css" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+      .header {
+          background-image: url('others-header.png');
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          padding: 200px 0;
+          text-align: center;
+      }
+
+      .content {
+          padding: 50px 0;
+      }
+
+      .py-5 p{
+            font-size: 20px;
+        }
+
+      .highlight-row {
+          background-color: #f5f5f5; 
+          padding: 10px; 
+          border-radius: 10px;
+          margin-bottom: 20px;
+      }
+ 
+      .instrument-img,
+      .dance-img {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+          border: 2px solid #ccc;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+      }
+
+      .instrument-img:hover,
+      .dance-img:hover {
+          transform: scale(1.05);
+          border-color: rgb(255, 136, 0);
+      }
+
+      .instrument-box:hover .instrument-info,
+      .dance-box:hover .dance-info {
+          display: block;
+      }
+
+      .instrument-box,
+      .dance-box {
+          text-align: center;
+          padding: 20px;
+          position: relative; 
+      }
+
+      .info-popup {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 9999;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 10px;
+          padding: 60px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+          max-width: 80%;
+          width: 100%;
+          height: 90%;
+          font-size: 1.2em;
+          backdrop-filter: blur(10px);
+          overflow-y: auto;
+      }
+
+      .info-popup h3 {
+          margin-top: 0;
+          font-size: 1.5em;
+      }
+
+      .info-popup p
+      .info-popup article{
+        font-size: 1.2em;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .close-icon {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .close-icon::before,
+    .close-icon::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #555;
+        top: 50%;
+        left: 0%;
+        transform-origin: center;
+    }
+
+    .close-icon::before {
+        transform: rotate(45deg);
+    }
+
+    .close-icon::after {
+        transform: rotate(-45deg);
+    }
+
+    .close-btn:hover .close-icon::before,
+    .close-btn:hover .close-icon::after {
+        background-color: #ff0000; 
+    }
+
+    #videoContainer video {
+          display: block; 
+          margin: 0 auto; 
+          max-width: 50%; 
+          height: auto; 
+          padding: 20px;
+      }
+
+      #imageContainer img{
+        display: block;
+        max-width: 50%;
+        height: auto;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      #articleContainer,
+      #audioContainer {
+          margin-top: 20px; 
+      }
+
+      @media (max-width: 768px) {
+            .header {
+                padding: 80px 0; 
+            }
+
+            .content {
+                padding: 20px 0; 
+            }
+
+            .instrument-box,
+            .dance-box {
+                padding: 5px; 
+            }
+
+            .info-popup {
+                padding: 20px; 
+            }
+
+            .close-btn {
+                top: 5px; 
+                right: 5px; 
+            }
+        }
+      
+  </style>
+
+</head>
+
+<body>
+  <nav id="navbar"></nav>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+          <h1 class="display-4">Others Music and Dance Cultures</h1>
+      </div>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+        <h2>Introduction</h2>
+        <p>Welcome to the rich tapestry of indigenous cultures nestled within the lush landscapes of Sarawak and Sabah, where ancient traditions and vibrant communities thrive amidst the beauty of nature. Among these communities such as the Iban, Kadazan, and Bidayuh peoples, each with their own unique customs, languages, and artistic expressions. 
+          Through their art, music, and rituals, the indigenous continue to celebrate their cultural identity and inspire others to appreciate the beauty and diversity of Malaysia's indigenous heritage.</p>
+    </div>
+  </section>
+
+<!-- Content Section -->
+<div class="container">
+          <h2>Musical Instruments</h2>
+          <div class="row highlight-row">
+              <div class="col-lg-3 mb-4 instrument-box">
+                  <img src="sompoton.png" alt="Sompoton" class="instrument-img" onclick="showInfoPopup('Sompoton',
+                  'The Sompoton is a traditional musical instrument native to the Kadazandusun ethnic group of Sabah, Malaysia. ',
+                  'playing-Sompoton.png',
+                  '',
+                  'The Sompoton is a bamboo mouth organ that consists of several bamboo pipes of varying lengths bound together with rattan or other natural fibers. Each pipe produces a different pitch when blown into, similar to the concept of a pan flute. The pipes are arranged in a row and secured to a wooden frame, allowing the player to hold and manipulate the instrument comfortably. Playing the Sompoton involves blowing air into the bamboo pipes while simultaneously covering and uncovering the finger holes to produce different notes. ',
+                  '')">
+                    <h3>Sompoton</h3>
+              </div>
+              <div class="col-lg-3 mb-4 instrument-box">
+                  <img src="bungkau.png" alt="Bungkau" class="instrument-img" onclick="showInfoPopup('Bungkau',
+                'Bungkau is a traditional musical instrument originating from the indigenous communities of Sabah, Malaysia, particularly among the Kadazandusun and Murut ethnic groups.',
+                'playing-Bungkau.png',
+                '',
+                'The Bungkau is a percussion instrument crafted from natural materials found in the local environment. It typically consists of a hollowed-out wooden trunk or bamboo section, with a series of wooden or bamboo keys attached to its surface. The keys are of varying lengths, allowing for different pitches to be produced when struck. Playing the Bungkau involves striking the keys with mallets or beaters, producing rhythmic patterns and melodies. The keys are arranged in a linear or circular fashion, allowing the player to create a wide range of sounds and rhythms. Skilled Bungkau players can produce complex rhythms and melodies, adding depth and texture to traditional music performances.',
+                '')">
+                    <h3>Bungkau</h3>
+              </div>
+              <div class="col-lg-3 mb-4 instrument-box">
+                  <img src="sape.png" alt="Sape" class="instrument-img" onclick="showInfoPopup('Sape',
+                  'The Sape, also known as the Sapeh or Sampek, is a traditional stringed musical instrument originating from the indigenous communities of Sarawak, Malaysia, particularly among the Orang Ulu tribes such as the Kenyah, Kayan, and Kelabit.',
+                  '',
+                  'Sape.mp4',
+                  'The Sape is a carved wooden lute-like instrument with a long, slender neck and a resonating body. It typically has four strings, although some variations may have up to six strings. The body of the Sape is usually made from a single piece of hardwood, such as Belian or Meranti, which is hollowed out and carved into a distinctive boat-shaped form. The neck may be adorned with intricate carvings and decorative motifs, reflecting the craftsmanship and cultural symbolism of the instrument. Playing the Sape involves plucking or strumming the strings with the fingers or a plectrum, while simultaneously manipulating the frets on the neck to produce different pitches and melodies.',
+                  '')">
+                    <h3>Sape</h3>
+              </div>
+              <div class="col-lg-3 mb-4 instrument-box">
+                <img src="bebendai.png" alt="Bebendai" class="instrument-img" onclick="showInfoPopup('Bebendai',
+                'The Bebendai is a traditional percussion instrument indigenous to the Iban community, one of the largest ethnic groups in Sarawak, Malaysia. ',
+                'playing-Bebendai.png',
+                '',
+                'It is often played during social gatherings and significant events such as weddings and harvest festivals. Playing the Bebendai involves striking the drumhead with bare hands or padded beaters, producing rhythmic patterns and percussive sounds. Bebendai often accompanies the Ngajat, a traditional dance form of the Iban people of Sarawak. ',
+                '')">
+                  <h3>Bebendai</h3>
+                  </div>
+          </div>
+          
+          <h2 class="mt-5">Dance</h2>
+          <div class="row highlight-row">
+              <div class="col-lg-3 mb-4 dance-box">
+                  <img src="magunatip.png" alt="Magunatip" class="dance-img" onclick="showInfoPopup('Magunatip',
+                  'Magunatip, also known as the bamboo dance, is one of the most popular traditional dance from the Kadazan-Dusun community of Sabah, Malaysia. This iconic dance which requires dancers to have speed and agility is performed by the Murut people.',
+                  'magunatipDance.png',
+                  '',
+                  'In order to perform this dance, three pairs of long bamboo poles are laid out horizontally on the ground. Each pair of bamboo poles are held by two bamboo strikers at opposite ends to form three rows of clapping poles. Magunatip requires a high level of skill, agility, and coordination from the dancers. They must navigate the bamboo poles with precision, stepping in and out between them without tripping or getting their feet caught. The footwork is often fast-paced and intricate, adding to the visual appeal of the dance. Magunatip is an important cultural herritage of Sabah now. It is performed during festivals like Keamatan or Harvest festival.',
+                  '')">
+                  <h3>Magunatip</h3>
+              </div>
+              <div class="col-lg-3 mb-4 dance-box">
+                  <img src="sumazau.png" alt="Sumazau" class="dance-img" onclick="showInfoPopup('Sumazau',
+                  'Sumazau is a traditional dance originated from the largest indigenous group of Sabah, the Kadazan-Dusun people.',
+                  '',
+                  'Sumazau.mp4',
+                  'The musical instruments that often accompanies the Sumazau dance are gongs and drums. Sumazau is not only performed as thanksgiving for harvest, resistance against oppression, polytheistic worship, and to cure diseases but also during festivals, weddings and other celebrations. The dancers who are in male-female pairs imitate the movement of a flying eagle by stretching their arms on both sides and swing them up and down. Sumazau is typically performed by dancers dressed in traditional Kadazandusun attire, which includes colorful costumes adorned with beads, feathers, and other decorative elements. ',
+                  '')">
+                      <h3>Sumazau</h3>
+              </div>
+              <div class="col-lg-3 mb-4 dance-box">
+                  <img src="ngajat.png" alt="Ngajat" class="dance-img" onclick="showInfoPopup('Ngajat',
+                  'Ngajat is a traditional dance originating from the Iban community of Sarawak, Malaysia.',
+                  'ngajat2.png',
+                  '',
+                  'Ngajat is characterized by its rhythmic movements, which are performed to the beat of traditional music played on instruments such as the gendang (drum), engkerumong (gong set), and seruling (flute). The dancers, typically men or women, wear traditional Iban attire, which includes elaborately decorated costumes adorned with beads, feathers, and other ornamental embellishments. Dancers move gracefully and fluidly, with movements that mimic the actions of everyday life, such as hunting, farming, or celebrating.',
+                  '')">
+                      <h3>Ngajat</h3>
+              </div>
+              <div class="col-lg-3 mb-4 dance-box">
+                <img src="warrior-dance.png" alt="Warrior Dance" class="dance-img" onclick="showInfoPopup('Warrior Dance',
+                'The Warrior Dance, also known as Tarian Pahlawan in Malay, is a traditional dance form that portrays the bravery, strength, and valor of warriors in Malaysian culture. This dance is inspired by the martial traditions and historical narratives of various ethnic communities across Malaysia, including the Malay, Orang Asli, and indigenous tribes of Sabah and Sarawak.',
+                '',
+                'warriorDance.mp4',
+                'The Warrior Dance often draws inspiration from historical events, legends, and folklore surrounding warriors and their heroic deeds. These narratives may include stories of legendary figures, battles, conquests, and acts of valor that are celebrated within Malaysian cultural heritage. The movements and gestures in the Warrior Dance are highly symbolic, representing various aspects of warrior culture, such as bravery, agility, and combat techniques. Dancers may use props such as spears, swords, shields, and traditional weaponry to enhance the visual storytelling and evoke the spirit of ancient warriors. Dancers typically wear elaborate costumes and attire that reflect the cultural traditions and martial heritage of their respective ethnic communities. These costumes may include traditional garments, armor, headdresses, and accessories adorned with symbols, motifs, and colors associated with warrior symbolism.',
+                '')">
+                    <h3>Warrior Dance</h3>
+            </div>
+          </div>
+ </div>
+
+<!-- Information Popup -->
+<div class="info-popup" id="infoPopup">
+    <h3 id="popupTitle"></h3>
+    <p id="popupDescription"></p>
+
+    <div id="imageContainer"></div>
+    <div id="videoContainer"></div>
+    <div id="articleContainer"></div>
+    <div id="audioContainer"></div>
+    <button class="close-btn" onclick="hideInfoPopup()"><span class="close-icon"></span></button>
+</div>
+<footer id="footer"></footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        $("#navbar").load("navbar.html");
+    });
+</script>
+
+<script>
+    $(function () {
+        $("#footer").load("footer.html");
+    });
+</script>
+<script>
+function showInfoPopup(title, description, imageSrc, videoSrc, articleContent, audioSrc) {
+  document.getElementById("popupTitle").innerHTML = title.replace(/\n/g, '<br>') + '<hr>';;
+  document.getElementById("popupDescription").innerHTML = description;
+  document.getElementById("imageContainer").innerHTML = "";
+  document.getElementById("videoContainer").innerHTML = "";
+  document.getElementById("articleContainer").innerHTML = "";
+  document.getElementById("audioContainer").innerHTML = "";
+
+  if(imageSrc){
+    var imageElement = document.createElement("img");
+    imageElement.controls = true;
+    imageElement.src = imageSrc;
+    document.getElementById("imageContainer").appendChild(imageElement);
+  }
+
+  if (videoSrc) {
+      var videoElement = document.createElement("video");
+      videoElement.controls = true;
+      videoElement.src = videoSrc;
+      document.getElementById("videoContainer").appendChild(videoElement);
+  }
+
+  if (articleContent) {
+      var articleElement = document.createElement("article");
+      articleElement.innerHTML = articleContent;
+      document.getElementById("articleContainer").appendChild(articleElement);
+  }    
+
+  if (audioSrc) {
+      var audioElement = document.createElement("audio");
+      audioElement.controls = true;
+      audioElement.src = audioSrc;
+      document.getElementById("audioContainer").appendChild(audioElement);
+  }
+
+  document.getElementById("infoPopup").style.display = "block";
+  }
+
+function hideInfoPopup() {
+    var videoElement = document.getElementById("videoElement");
+    if (videoElement) {
+        videoElement.currentTime = 0; 
+        videoElement.pause();
+  }
+    document.getElementById("infoPopup").style.display = "none";
+}
+</script>
+</body>
+
+</html>
