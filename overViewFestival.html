@@ -8,64 +8,68 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   
     <style>
-        .overview h1 {
-            font-family:'Trebuchet MS';
-            font-size: 40px;
-            text-align: center;
-            font-weight:bolder;
-            padding-top: 30px;
-        }
+        /* Define general styles for your page */
 
-        .overview p {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;        
-            font-size: 20px;
-            text-align: center;
-            padding: 50px;
-            padding-top: 0px;
-        }
+/* Header */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
 
-        .box {
-            border: 1px solid #ccc;
-            padding: 8px;
+/* Main content */
+.overview {
+    padding: 0 20px;
+}
 
-            margin-bottom: 10px;
-            height: auto;
-            overflow: hidden;
-            /* Prevents content from overlapping */
-        }
+/* Boxes */
+.box {
+    padding: 8px;
+    margin-bottom: 10px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
 
-        .box:hover {
-            background-color: rgb(208, 225, 240);
-        }
+/* Title */
+.title {
+    margin-top: 10px;
+    text-align: center;
+}
 
-        .box img {
-            max-width: 100%;
-            /* Ensures the image fits within the box */
-            width: 100%;
-            height: auto;
-            /* Allows the image to maintain its aspect ratio */
+/* Next page link */
+.nextpage {
+    text-align: center;
+    padding: 20px 0;
+}
 
-        }
+/* Define styles for mobile screens */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 10px 0;
+    }
 
-        .title {
-            margin-top: 10px;
-            text-align: center;
+    /* Main content */
+    .overview {
+        padding: 0 10px;
+    }
 
-        }
+    /* Boxes */
+    .box {
+        width: 100%;
+    }
 
-        .nextpage a {
-            float: right;
-            color: rgb(93, 111, 212);
-            text-decoration: none;
-            font-size: 25px;
-            font-family: 'Dongle';
-        }
+    /* Title */
+    .title {
+        font-size: 16px;
+    }
 
-        .nextpage::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
+    /* Next page link */
+    .nextpage {
+        padding: 10px 0;
+    }
+}
+
     </style>
 </head>
 
